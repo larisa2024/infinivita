@@ -68,8 +68,8 @@ function okMsg(id) {
 }
 
 /* Espace de démonstration (session uniquement) */
-function openSpace() {
-  const prenomInput = document.getElementById('esp-prenom');
+function openSpace(idPrenom) {
+  const prenomInput = document.getElementById(idPrenom || 'esp-prenom');
   const prenom = prenomInput ? prenomInput.value.trim() : '';
   document.getElementById('welcome-msg').textContent = prenom ? 'Bienvenue, ' + prenom : 'Bienvenue';
   document.getElementById('login-panels').style.display = 'none';

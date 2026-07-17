@@ -67,6 +67,8 @@ nav a.espace:hover { background: var(--ink); color: var(--brume); }
 /* ---------- Layout ---------- */
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
 .narrow { max-width: 760px; margin-left: auto; margin-right: auto; }
+/* Dans les pages de contenu, la colonne s'aligne sur le bord gauche du titre et de la photo */
+section.block > .narrow { margin-left: 0; }
 section.block { padding: 3rem 0; }
 h1, h2, h3, h4 { font-family: 'Fraunces', 'Iowan Old Style', Palatino, Georgia, serif; }
 h2.section-title { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 500; margin-bottom: 0.4rem; }

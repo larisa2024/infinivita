@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Mon espace — InfiniVita</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -33,14 +33,15 @@
     <div id="login-panels">
       <div class="panel">
         <h3>Créer mon espace</h3>
-        <label>Votre prénom</label><input type="text" id="esp-prenom">
+        <label>Votre prénom ou pseudonyme</label><input type="text" id="esp-prenom">
         <label>Votre phrase secrète</label><input type="password" id="esp-phrase">
-        <div style="margin-top:1rem;"><button class="btn" onclick="openSpace()">Ouvrir mon espace</button></div>
+        <div style="margin-top:1rem;"><button class="btn" onclick="openSpace('esp-prenom')">Ouvrir mon espace</button></div>
       </div>
       <div class="panel">
         <h3>J'ai déjà un espace</h3>
+        <label>Votre prénom ou pseudonyme</label><input type="text" id="esp-prenom2">
         <label>Votre phrase secrète</label><input type="password">
-        <div style="margin-top:1rem;"><button class="btn ghost" onclick="openSpace()">Me connecter</button></div>
+        <div style="margin-top:1rem;"><button class="btn ghost" onclick="openSpace('esp-prenom2')">Me connecter</button></div>
       </div>
       <p class="hint">🔑 Votre phrase secrète est votre clé : sans elle, personne, pas même nous, ne peut ouvrir votre espace. Perdue, votre mémoire devient indéchiffrable — sauf si vous avez choisi le dépôt de clé chez un notaire (offre 4 — La Transmission).</p>
     </div>
@@ -64,6 +65,6 @@
   <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>
