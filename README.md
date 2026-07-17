@@ -27,8 +27,8 @@ Site vitrine statique de démonstration du projet **InfiniVita** : un journal de
 
 ## À brancher (comptes à créer par la fondatrice)
 
-- **Rendez-vous 30 min** : remplacer les liens `mailto:` marqués `TODO` par le lien de réservation TakeToki.
-- **Liste d'attente** : coller l'URL du formulaire Tally dans `data-tally-url` (`index.html`) — le formulaire s'affiche alors à la place du bouton email.
+- **Rendez-vous 30 min** : branché sur Calendly (`calendly.com/larisa-kr-interargus/30min`). Un événement dédié « rendez-vous notarial » pourra être créé plus tard.
+- **Liste d'attente** : coller le lien du formulaire Tally (format `https://tally.so/r/XXXX`) dans `data-tally-url` (`index.html`) — le formulaire s'affiche alors à la place du bouton email.
 
 ## Lancer en local
 

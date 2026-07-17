@@ -14,14 +14,17 @@
 (function () {
   const slot = document.getElementById('tally-slot');
   if (!slot) return;
-  const url = slot.dataset.tallyUrl;
+  let url = slot.dataset.tallyUrl;
   if (!url) return;
+  /* Accepte le lien de partage tally.so/r/XXXX et le convertit en version intégrable */
+  url = url.replace('tally.so/r/', 'tally.so/embed/');
+  if (url.indexOf('?') === -1) url += '?hideTitle=1&transparentBackground=1&alignLeft=1';
   const fallback = document.getElementById('waitlist-fallback');
   if (fallback) fallback.style.display = 'none';
   const iframe = document.createElement('iframe');
   iframe.src = url;
   iframe.title = "Liste d'attente InfiniVita";
-  iframe.style.cssText = 'width:100%;min-height:420px;border:1px solid var(--line);border-radius:4px;background:#fff;';
+  iframe.style.cssText = 'width:100%;min-height:460px;border:1px solid var(--line);border-radius:4px;background:#fff;';
   slot.appendChild(iframe);
 })();
 
