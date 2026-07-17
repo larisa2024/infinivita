@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" role="img" aria-label="Un livre ouvert dont les pages s'envolent en oiseaux vers un ciel améthyste">
+  <defs>
+    <linearGradient id="va-ciel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7b6a9e"/>
+      <stop offset="0.7" stop-color="#b3a4c9"/>
+      <stop offset="1" stop-color="#e9ddd0"/>
+    </linearGradient>
+    <linearGradient id="va-page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf6ea"/>
+      <stop offset="1" stop-color="#efe6d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="160" rx="8" fill="url(#va-ciel)"/>
+  <!-- colline -->
+  <path d="M0 128 Q70 108 140 124 T220 118 V160 H0 Z" fill="#544671"/>
+  <!-- livre ouvert -->
+  <g>
+    <path d="M58 118 Q88 106 110 116 L110 142 Q88 132 58 142 Z" fill="url(#va-page)"/>
+    <path d="M162 118 Q132 106 110 116 L110 142 Q132 132 162 142 Z" fill="url(#va-page)" opacity="0.96"/>
+    <path d="M110 116 L110 142" stroke="#c9b48c" stroke-width="1.6"/>
+  </g>
+  <!-- pages qui deviennent oiseaux -->
+  <g fill="#fbf6ea">
+    <path d="M118 100 q6 -8 14 -6 q-2 8 -10 10 q6 2 12 0 q-4 8 -14 6 Z" opacity="0.95"/>
+    <path d="M136 76 q5 -7 12 -5 q-2 7 -8 8 q5 2 10 0 q-3 7 -12 5 Z" opacity="0.85"/>
+    <path d="M158 54 q4 -6 10 -4 q-1 6 -7 7 q4 1 8 0 q-2 6 -10 4 Z" opacity="0.75"/>
+    <path d="M176 36 q3 -5 8 -3 q-1 5 -5 5 q3 1 6 0 q-2 5 -8 3 Z" opacity="0.6"/>
+  </g>
+  <!-- fil d'or reliant livre et envol -->
+  <path d="M112 120 C120 108 128 96 138 82 C148 68 160 54 178 38" fill="none" stroke="#c9a86a" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="138" cy="82" r="2.2" fill="#e9d3a3"/>
+  <circle cx="178" cy="38" r="2.6" fill="#e9d3a3"/>
+</svg>

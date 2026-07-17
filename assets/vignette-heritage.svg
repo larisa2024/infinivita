@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" role="img" aria-label="Une clé d'or et un pli scellé sur velours améthyste, au crépuscule">
+  <defs>
+    <linearGradient id="vh-fond" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#453a5c"/>
+      <stop offset="1" stop-color="#6f5f92"/>
+    </linearGradient>
+    <linearGradient id="vh-or" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9d3a3"/>
+      <stop offset="0.5" stop-color="#c9a86a"/>
+      <stop offset="1" stop-color="#a8854b"/>
+    </linearGradient>
+    <linearGradient id="vh-pli" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf6ea"/>
+      <stop offset="1" stop-color="#eee3cd"/>
+    </linearGradient>
+    <radialGradient id="vh-lueur" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#c9a86a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#c9a86a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="220" height="160" rx="8" fill="url(#vh-fond)"/>
+  <circle cx="110" cy="84" r="86" fill="url(#vh-lueur)"/>
+  <!-- drapé -->
+  <path d="M0 120 Q55 104 110 116 T220 112 V160 H0 Z" fill="#37323f"/>
+  <path d="M0 132 Q70 118 140 130 T220 126 V160 H0 Z" fill="#2c2733"/>
+  <!-- pli scellé -->
+  <g transform="rotate(-4 110 96)">
+    <rect x="62" y="74" width="96" height="60" rx="3" fill="url(#vh-pli)"/>
+    <path d="M62 78 L110 108 L158 78" fill="none" stroke="#d8c9a8" stroke-width="1.6"/>
+    <circle cx="110" cy="106" r="9" fill="#a84e37"/>
+    <circle cx="110" cy="106" r="5.4" fill="none" stroke="#7e3826" stroke-width="1.4"/>
+  </g>
+  <!-- clé d'or, posée à côté du pli -->
+  <g transform="rotate(-24 40 40)">
+    <circle cx="34" cy="34" r="10" fill="none" stroke="url(#vh-or)" stroke-width="4.6"/>
+    <path d="M42 40 L62 58" stroke="url(#vh-or)" stroke-width="5.4" stroke-linecap="round"/>
+    <path d="M56 56 l6 -7 M62 60 l6 -7" stroke="url(#vh-or)" stroke-width="4.4" stroke-linecap="round"/>
+  </g>
+  <!-- fil d'or -->
+  <path d="M46 30 C90 18 130 30 158 26 C176 24 188 18 198 10" fill="none" stroke="#c9a86a" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="158" cy="26" r="2.2" fill="#e9d3a3"/>
+  <circle cx="198" cy="10" r="2.6" fill="#e9d3a3"/>
+</svg>

@@ -27,15 +27,21 @@
 </header>
 
 <div class="hero">
-  <div class="question">Qu'avez-vous fait le <span id="date-souvenir">12 juillet 2016</span>&nbsp;?</div>
-  <h1>Ce qui n'est pas écrit <em>disparaît</em>.</h1>
-  <p><strong>Vous ne savez plus. Presque personne ne sait.</strong> Ici, chaque jour confié rejoint le fil&nbsp;: daté, chiffré, gardé.</p>
-  <p>Pour vous, d'abord. Pour les vôtres, si vous le décidez. Pour personne d'autre.</p>
-  <p class="tagline">InfiniVita — parce qu'une vie, même finie, peut laisser une trace infinie.</p>
-  <div class="cta-row">
-    <a class="btn" href="#liste-attente">Rejoindre la liste d'attente</a>
-    <!-- TODO : remplacer le mailto par le lien de réservation TakeToki une fois le compte créé -->
-    <a class="btn ghost" href="#" data-mail-subject="Rendez-vous 30 min gratuit — InfiniVita">Rendez-vous 30 min gratuit</a>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="question">Qu'avez-vous fait le <span id="date-souvenir">12 juillet 2016</span>&nbsp;?</div>
+      <h1>Ce qui n'est pas écrit <em>disparaît</em>.</h1>
+      <p><strong>Vous ne savez plus. Presque personne ne sait.</strong> Ici, chaque jour confié rejoint le fil&nbsp;: daté, chiffré, gardé.</p>
+      <p>Pour vous, d'abord. Pour les vôtres, si vous le décidez. Pour personne d'autre.</p>
+      <p class="tagline">InfiniVita — parce qu'une vie, même finie, peut laisser une trace infinie.</p>
+      <div class="cta-row">
+        <a class="btn" href="journal.html">Commencer mon journal</a>
+        <a class="btn ghost" href="#liste-attente">Rejoindre la liste d'attente</a>
+      </div>
+    </div>
+    <div class="hero-illus">
+      <img src="assets/photos/accueil-ecrire.jpg" alt="Une femme écrit son journal à la lumière d'une grande fenêtre, un album de photographies anciennes ouvert à côté d'elle.">
+    </div>
   </div>
 </div>
 
@@ -49,23 +55,30 @@
 
 <div class="wrap">
   <div class="three-cards">
-    <a class="card" href="journal.html">
+    <a class="card reveal" href="journal.html">
+      <img class="card-photo" src="assets/photos/journal-ecrire.jpg" alt="Un homme écrit à une table en bois, un carnet de cuir posé près de lui.">
       <div class="kicker">Le présent</div>
       <h3>Mon Journal</h3>
       <p>Écrire chaque jour ce que vous vivez, ressentez, traversez. Vos mots, tels quels, jamais reformulés par une machine.</p>
       <div class="sub">Météo du jour · Ma journée · Mémoire · Projections</div>
     </a>
-    <a class="card" href="futur.html">
+    <a class="card reveal" href="futur.html">
+      <img class="card-photo" src="assets/photos/futur-aube.jpg" alt="Une femme de dos regarde le soleil se lever au bout d'un chemin bordé d'arbres.">
       <div class="kicker">L'avenir</div>
       <h3>Mon Futur</h3>
       <p>Ce que vous créez aujourd'hui pour demain : vos œuvres, votre compagnon d'écriture, et la possibilité, un jour, de vous faire relire votre propre histoire.</p>
       <div class="sub">Mes Créations · Mon Assistant · Se faire relire son histoire</div>
     </a>
-    <a class="card full" href="transmission.html">
-      <div class="kicker">L'héritage</div>
-      <h3>Ma Transmission</h3>
-      <p>Là où tout se rejoint : décider, de votre vivant, qui recevra votre histoire — vos proches, vos causes et communautés, et l'écho qui pourra vous prolonger. Sous la garde d'un notaire, jamais d'un algorithme.</p>
-      <div class="sub">Mes proches · Mes causes et communautés · Dépôt chez le notaire · Mon jumeau numérique</div>
+    <a class="card full reveal" href="transmission.html">
+      <div class="split">
+        <div>
+          <div class="kicker">L'héritage</div>
+          <h3>Ma Transmission</h3>
+          <p>Là où tout se rejoint : décider, de votre vivant, qui recevra votre histoire — vos proches, vos causes et communautés, et l'écho qui pourra vous prolonger. Sous la garde d'un notaire, jamais d'un algorithme.</p>
+          <div class="sub">Mes proches · Mes causes et communautés · Dépôt chez le notaire · Mon jumeau numérique</div>
+        </div>
+        <img class="card-photo" src="assets/photos/accueil-famille.jpg" alt="Trois générations réunies sur un canapé autour d'un livre « Souvenirs de famille ».">
+      </div>
     </a>
   </div>
 </div>
@@ -76,7 +89,7 @@
 </div>
 
 <div class="wrap">
-  <section class="block">
+  <section class="block reveal">
     <div class="triple">
       <div class="cell">
         <h4>Ce que les photos ne gardent pas</h4>
@@ -93,7 +106,7 @@
     </div>
   </section>
 
-  <div class="vault">
+  <div class="vault reveal">
     <h2>Une clé unique. <em>La vôtre.</em> Personne d'autre.</h2>
     <p>Chaque journal InfiniVita est chiffré avec une clé unique, générée pour vous seul(e). Nous ne la possédons pas : même si on nous l'ordonnait, nous serions incapables de lire une ligne de votre vie.</p>
     <p><strong style="color:var(--on-dark-strong)">Trois lieux de garde, à votre choix — ou les trois à la fois :</strong></p>

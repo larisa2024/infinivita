@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" role="img" aria-label="Carnet ouvert au matin, un fil d'or court sur la page">
+  <defs>
+    <linearGradient id="vp-ciel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b3a4c9"/>
+      <stop offset="1" stop-color="#e9ddd0"/>
+    </linearGradient>
+    <radialGradient id="vp-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f2e3c4" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#c9a86a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vp-page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf6ea"/>
+      <stop offset="1" stop-color="#efe6d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="160" rx="8" fill="url(#vp-ciel)"/>
+  <circle cx="170" cy="38" r="46" fill="url(#vp-halo)"/>
+  <circle cx="170" cy="38" r="12" fill="#f4e7cb"/>
+  <!-- table -->
+  <rect x="0" y="108" width="220" height="52" fill="#544671"/>
+  <!-- tasse fumante -->
+  <g>
+    <rect x="168" y="86" width="26" height="22" rx="4" fill="#37323f"/>
+    <path d="M194 92 q10 4 0 12" fill="none" stroke="#37323f" stroke-width="3"/>
+    <path d="M177 78 q4 -6 0 -12 M186 80 q4 -6 0 -12" fill="none" stroke="#efe6f2" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <!-- carnet ouvert -->
+  <g>
+    <path d="M28 96 Q64 84 100 96 L100 130 Q64 118 28 130 Z" fill="url(#vp-page)"/>
+    <path d="M172 96 Q136 84 100 96 L100 130 Q136 118 172 130 Z" fill="url(#vp-page)" opacity="0.96"/>
+    <path d="M100 96 L100 130" stroke="#c9b48c" stroke-width="1.6"/>
+    <g stroke="#b6a8cc" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+      <path d="M40 102 h44 M40 109 h38 M40 116 h42"/>
+    </g>
+  </g>
+  <!-- fil d'or -->
+  <path d="M112 118 C130 108 122 96 144 90 C158 86 162 74 170 62" fill="none" stroke="#c9a86a" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="144" cy="90" r="2.4" fill="#e9d3a3"/>
+  <circle cx="170" cy="62" r="2.8" fill="#e9d3a3"/>
+</svg>

@@ -35,6 +35,21 @@
   });
 })();
 
+/* Apparition douce au défilement (respecte prefers-reduced-motion via le CSS) */
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length || !('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('seen'));
+    return;
+  }
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('seen'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(el => obs.observe(el));
+})();
+
 /* Sélection d'un emoji (météo, humeur) */
 function pick(btn) {
   btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('sel'));
