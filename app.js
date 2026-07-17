@@ -24,7 +24,7 @@
   const iframe = document.createElement('iframe');
   iframe.src = url;
   iframe.title = "Liste d'attente InfiniVita";
-  iframe.style.cssText = 'width:100%;min-height:460px;border:1px solid var(--line);border-radius:4px;background:#fff;';
+  iframe.style.cssText = 'width:100%;min-height:660px;border:1px solid var(--line);border-radius:4px;background:#fff;';
   slot.appendChild(iframe);
 })();
 
