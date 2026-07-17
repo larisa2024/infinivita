@@ -25,6 +25,16 @@
   slot.appendChild(iframe);
 })();
 
+/* Liens de contact : adresse assemblée au chargement pour rester illisible
+   par les robots collecteurs de spam (adresse pro temporaire — à remplacer
+   par le lien TakeToki pour les rendez-vous, et par contact@<domaine> ensuite). */
+(function () {
+  const u = 'larisa.kr', d = 'interargus.com';
+  document.querySelectorAll('a[data-mail-subject]').forEach(a => {
+    a.href = 'mailto:' + u + '@' + d + '?subject=' + encodeURIComponent(a.dataset.mailSubject);
+  });
+})();
+
 /* Sélection d'un emoji (météo, humeur) */
 function pick(btn) {
   btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('sel'));
