@@ -1,0 +1,103 @@
+/* InfiniVita V3 — interactions communes (prototype : rien n'est envoyé) */
+
+/* Date dynamique du hero : « il y a 10 ans jour pour jour » */
+(function () {
+  const el = document.getElementById('date-souvenir');
+  if (!el) return;
+  const d = new Date();
+  d.setFullYear(d.getFullYear() - 10);
+  el.textContent = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+})();
+
+/* Liste d'attente : bascule sur le formulaire Tally dès que l'URL est renseignée
+   dans data-tally-url (index.html). Tant qu'elle est vide, le bouton email reste. */
+(function () {
+  const slot = document.getElementById('tally-slot');
+  if (!slot) return;
+  const url = slot.dataset.tallyUrl;
+  if (!url) return;
+  const fallback = document.getElementById('waitlist-fallback');
+  if (fallback) fallback.style.display = 'none';
+  const iframe = document.createElement('iframe');
+  iframe.src = url;
+  iframe.title = "Liste d'attente InfiniVita";
+  iframe.style.cssText = 'width:100%;min-height:420px;border:1px solid var(--line);border-radius:4px;background:#fff;';
+  slot.appendChild(iframe);
+})();
+
+/* Sélection d'un emoji (météo, humeur) */
+function pick(btn) {
+  btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+}
+
+/* Message de confirmation éphémère */
+function okMsg(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+
+/* Espace de démonstration (session uniquement) */
+function openSpace() {
+  const prenomInput = document.getElementById('esp-prenom');
+  const prenom = prenomInput ? prenomInput.value.trim() : '';
+  document.getElementById('welcome-msg').textContent = prenom ? 'Bienvenue, ' + prenom : 'Bienvenue';
+  document.getElementById('login-panels').style.display = 'none';
+  document.getElementById('space-open').style.display = 'block';
+}
+function closeSpace() {
+  document.getElementById('login-panels').style.display = 'block';
+  document.getElementById('space-open').style.display = 'none';
+}
+
+/* FAQ : construction (numérotation continue) + accordéon */
+function buildFAQ(data) {
+  const root = document.getElementById('faq-root');
+  if (!root) return;
+  let n = 0;
+  data.forEach(sec => {
+    const h = document.createElement('h3');
+    h.className = 'faq-section';
+    h.textContent = sec.section;
+    root.appendChild(h);
+    sec.items.forEach(([q, a]) => {
+      n++;
+      const item = document.createElement('div');
+      item.className = 'faq-item';
+      const btn = document.createElement('button');
+      btn.className = 'faq-q';
+      const label = document.createElement('span');
+      const num = document.createElement('span');
+      num.className = 'qnum';
+      num.textContent = n + '.';
+      label.appendChild(num);
+      label.appendChild(document.createTextNode(q));
+      const chev = document.createElement('span');
+      chev.className = 'chev';
+      chev.textContent = '▼';
+      btn.appendChild(label);
+      btn.appendChild(chev);
+      const rep = document.createElement('div');
+      rep.className = 'faq-a';
+      const p = document.createElement('p');
+      p.textContent = a;
+      rep.appendChild(p);
+      item.appendChild(btn);
+      item.appendChild(rep);
+      root.appendChild(item);
+      btn.addEventListener('click', () => {
+        const dejaOuvert = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(autre => {
+          autre.classList.remove('open');
+          autre.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!dejaOuvert) {
+          item.classList.add('open');
+          rep.style.maxHeight = rep.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+}

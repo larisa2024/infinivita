@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Mon Journal — InfiniVita</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Infini<span>Vita</span></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="journal.html" class="active">Mon Journal</a>
+      <a href="futur.html">Mon Futur</a>
+      <a href="transmission.html">Ma Transmission</a>
+      <a href="tarifs.html">Services &amp; tarifs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="espace.html" class="espace">Mon espace</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="block">
+    <div class="page-kicker">Le présent</div>
+    <h2 class="section-title">Mon Journal</h2>
+    <div class="subnav">
+      <span>Météo du jour</span><span>Ma journée</span><span>Mémoire</span><span>Projections</span>
+    </div>
+
+    <div class="narrow prose">
+      <h3 style="margin-bottom:0.6rem;">Vous seul(e) êtes maître de votre histoire</h3>
+      <p class="lead">Aucune intelligence artificielle, même la plus savante, ne sait qui vous êtes. Vos rêves, vos doutes, vos exploits comme vos échecs, l'énergie d'un matin, la fatigue d'un soir, la main tendue d'un ami — tout cela n'existe que parce que vous l'avez traversé.</p>
+      <p><strong>Un fil relie vos trois temps :</strong> le quotidien et la météo du jour — le présent ; les souvenirs anciens, dans Mémoire — le passé ; vos projets, créations et livres, dans Mon Futur — l'avenir.</p>
+      <p>Un algorithme peut résumer, reformuler, lisser. Il ne peut pas se souvenir à votre place. Personne ne le peut.</p>
+      <p><strong>InfiniVita garde vos mots tels que vous les avez écrits. Pas une version optimisée. Pas une version corrigée. La vôtre.</strong></p>
+    </div>
+
+    <div class="panel narrow" style="margin-top:2.4rem;">
+      <h3>🌦️ Météo du jour</h3>
+      <p class="note">Quel temps fait-il en vous, et que souhaitez-vous à cette journée ?</p>
+      <div class="emoji-row" id="meteo-row">
+        <button onclick="pick(this)">☀️</button><button onclick="pick(this)">🌤️</button>
+        <button onclick="pick(this)">⛅</button><button onclick="pick(this)">🌧️</button>
+        <button onclick="pick(this)">⛈️</button><button onclick="pick(this)">🌈</button>
+      </div>
+      <label>Mes souhaits pour aujourd'hui</label>
+      <textarea id="meteo-txt"></textarea>
+      <div style="margin-top:1rem;"><button class="btn" onclick="okMsg('meteo-ok')">Poser ma météo</button></div>
+      <div class="ok-msg" id="meteo-ok">✓ Météo posée, datée du jour, chiffrée.</div>
+    </div>
+
+    <div class="panel narrow">
+      <h3>📔 Ma journée</h3>
+      <p class="note">Écrivez quand vous voulez, ce que vous voulez. La date du jour s'ajoute toute seule.</p>
+      <label>Comment vous sentez-vous ?</label>
+      <div class="emoji-row">
+        <button onclick="pick(this)">😊</button><button onclick="pick(this)">🥰</button>
+        <button onclick="pick(this)">😌</button><button onclick="pick(this)">😢</button>
+        <button onclick="pick(this)">😤</button><button onclick="pick(this)">🤔</button>
+      </div>
+      <label>Votre journée</label>
+      <textarea placeholder="Aujourd'hui, qu'avez-vous envie de garder ?"></textarea>
+      <div style="margin-top:1rem;"><button class="btn" onclick="okMsg('jour-ok')">Confier à ma mémoire</button></div>
+      <div class="ok-msg" id="jour-ok">✓ Confié. Une entrée scellée ne peut plus être réécrite — seulement supprimée entièrement, si vous le choisissez.</div>
+      <p class="hint">🔒 Chiffré sur votre appareil avant tout envoi. Personne, pas même nous, ne peut le lire.</p>
+    </div>
+
+    <div class="panel narrow">
+      <h3>🗝️ Mémoire</h3>
+      <p class="note">Un souvenir d'avant vous revient ? Donnez-lui sa vraie date : la date d'écriture s'ajoute d'elle-même.</p>
+      <label>Date du souvenir</label><input type="date">
+      <label>Le souvenir</label><textarea></textarea>
+      <div style="margin-top:1rem;"><button class="btn" onclick="okMsg('mem-ok')">Garder ce souvenir</button></div>
+      <div class="ok-msg" id="mem-ok">✓ Souvenir gardé à sa vraie date.</div>
+    </div>
+
+    <div class="panel narrow">
+      <h3>🧭 Projections</h3>
+      <p class="note">Votre plan d'avenir, daté d'aujourd'hui, avec la date de réalisation que vous visez.</p>
+      <label>Mon projet / plan d'action</label><textarea></textarea>
+      <label>Date de réalisation visée</label><input type="date">
+      <div style="margin-top:1rem;"><button class="btn" onclick="okMsg('proj-ok')">Poser ce cap</button></div>
+      <div class="ok-msg" id="proj-ok">✓ Cap posé.</div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="sig"><strong>InfiniVita</strong> — parce que ce que vous avez vécu ne devrait jamais se réduire à ce dont on se souvient de vous.</div>
+  <div>Privacy by design · Conservation fiduciaire 99 ans · <a href="faq.html">FAQ</a> · <a href="legal.html#mentions">Mentions légales</a> · <a href="legal.html#confidentialite">Confidentialité</a> · <a href="legal.html#cgu">CGU</a></div>
+  <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

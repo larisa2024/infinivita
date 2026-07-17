@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Mon espace — InfiniVita</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Infini<span>Vita</span></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="journal.html">Mon Journal</a>
+      <a href="futur.html">Mon Futur</a>
+      <a href="transmission.html">Ma Transmission</a>
+      <a href="tarifs.html">Services &amp; tarifs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="espace.html" class="espace active">Mon espace</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap narrow">
+  <section class="block">
+    <div class="page-kicker">Espace personnel</div>
+    <h2 class="section-title">Mon espace</h2>
+    <p style="color:var(--ink-soft);margin:0.8rem 0 1.8rem;">Un espace par personne, ouvert par votre phrase secrète : c'est elle qui fabrique votre clé de chiffrement.</p>
+
+    <div id="login-panels">
+      <div class="panel">
+        <h3>Créer mon espace</h3>
+        <label>Votre prénom</label><input type="text" id="esp-prenom">
+        <label>Votre phrase secrète</label><input type="password" id="esp-phrase">
+        <div style="margin-top:1rem;"><button class="btn" onclick="openSpace()">Ouvrir mon espace</button></div>
+      </div>
+      <div class="panel">
+        <h3>J'ai déjà un espace</h3>
+        <label>Votre phrase secrète</label><input type="password">
+        <div style="margin-top:1rem;"><button class="btn ghost" onclick="openSpace()">Me connecter</button></div>
+      </div>
+      <p class="hint">🔑 Votre phrase secrète est votre clé : sans elle, personne, pas même nous, ne peut ouvrir votre espace. Perdue, votre mémoire devient indéchiffrable — sauf si vous avez choisi le dépôt de clé chez un notaire (offre 4 — La Transmission).</p>
+    </div>
+
+    <div id="space-open" style="display:none;">
+      <div class="panel" style="border-color:var(--amethyste);">
+        <h3 id="welcome-msg">Bienvenue</h3>
+        <p class="note">Votre espace est ouvert (démonstration : sur cet appareil, cette session seulement). Dans la version complète, chaque page — Météo, Journal, Mémoire, Projections, Créations — écrit dans votre espace chiffré, où que vous soyez.</p>
+        <div style="margin-top:1.2rem;display:flex;gap:0.7rem;flex-wrap:wrap;">
+          <a class="btn" href="journal.html">Poser ma météo du jour</a>
+          <button class="btn ghost" onclick="closeSpace()">Fermer mon espace</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="sig"><strong>InfiniVita</strong> — parce que ce que vous avez vécu ne devrait jamais se réduire à ce dont on se souvient de vous.</div>
+  <div>Privacy by design · Conservation fiduciaire 99 ans · <a href="faq.html">FAQ</a> · <a href="legal.html#mentions">Mentions légales</a> · <a href="legal.html#confidentialite">Confidentialité</a> · <a href="legal.html#cgu">CGU</a></div>
+  <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

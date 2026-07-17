@@ -1,0 +1,250 @@
+/* InfiniVita V3 — Le fil d'améthyste */
+:root {
+  --ink: #2c2833;
+  --ink-soft: #625a70;
+  --brume: #f7f6fa;
+  --brume-2: #edeaf3;
+  --amethyste: #6f5599;
+  --amethyste-deep: #55407a;
+  --amethyste-soft: #b6a3d1;
+  --green: #4a6b57;
+  --line: #e3ddec;
+  --white: #fdfcff;
+  --on-dark: #d8d3e2;
+  --on-dark-strong: #e7e3f0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  background: var(--brume); color: var(--ink); line-height: 1.7;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(253,252,255,0.92); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  max-width: 1120px; margin: 0 auto; padding: 1rem 1.5rem;
+  display: flex; align-items: baseline; gap: 2.5rem; flex-wrap: wrap;
+}
+.logo { font-size: 1.4rem; letter-spacing: 0.01em; color: var(--ink); text-decoration: none; }
+.logo span { color: var(--amethyste); font-style: italic; }
+nav { display: flex; gap: 1.6rem; flex: 1; flex-wrap: wrap; align-items: baseline; }
+nav a {
+  font-family: -apple-system, 'Segoe UI', Helvetica, sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft); text-decoration: none; padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover { color: var(--amethyste-deep); }
+nav a.active { color: var(--amethyste); border-bottom-color: var(--amethyste); }
+nav a.espace {
+  margin-left: auto; border: 1px solid var(--ink); border-radius: 999px;
+  padding: 0.45rem 1.2rem; color: var(--ink);
+}
+nav a.espace:hover { background: var(--ink); color: var(--brume); }
+
+/* ---------- Layout ---------- */
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+.narrow { max-width: 760px; margin-left: auto; margin-right: auto; }
+section.block { padding: 3rem 0; }
+h2.section-title { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 500; margin-bottom: 0.4rem; }
+h2.section-title em { color: var(--amethyste); }
+.page-kicker {
+  font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--amethyste);
+  margin-bottom: 0.8rem;
+}
+.page-kicker::after { content: ''; display: block; width: 2.6rem; height: 3px; background: var(--amethyste); margin-top: 0.6rem; }
+.prose p { margin-bottom: 1rem; color: var(--ink-soft); }
+.prose p strong { color: var(--ink); }
+.prose .lead { font-size: 1.14rem; color: var(--ink); }
+.prose h3 { font-weight: 500; font-size: 1.4rem; }
+
+/* ---------- Hero (accueil) ---------- */
+.hero { position: relative; text-align: center; padding: 5.5rem 1rem 4rem; overflow: hidden; }
+.hero::before {
+  content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--amethyste-soft) 30%, var(--amethyste-soft) 70%, transparent);
+  opacity: 0.55;
+}
+.hero > * { position: relative; background: var(--brume); }
+.hero .question {
+  display: inline-block; font-style: italic; color: var(--amethyste);
+  font-size: 1.1rem; margin-bottom: 1.6rem; padding: 0 1.2rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5.5vw, 3.4rem); line-height: 1.15; font-weight: 500;
+  margin: 0 auto 1.6rem; max-width: 720px; padding: 0 1rem;
+}
+.hero h1 em { color: var(--amethyste); }
+.hero p { max-width: 620px; margin: 0 auto 0.9rem; color: var(--ink-soft); font-size: 1.1rem; padding: 0 1rem; }
+.hero .tagline { font-style: italic; color: var(--ink); margin-top: 1.6rem; }
+.cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.4rem; padding: 0.5rem 1rem; }
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-block; font-family: inherit; font-size: 1rem; cursor: pointer; text-decoration: none;
+  padding: 0.9rem 1.9rem; border-radius: 999px; border: 1px solid var(--ink);
+  background: var(--ink); color: var(--brume); transition: 0.25s; text-align: center;
+}
+.btn:hover { background: var(--amethyste-deep); border-color: var(--amethyste-deep); color: var(--brume); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--brume-2); color: var(--ink); }
+
+/* ---------- Bandeau de confiance ---------- */
+.trust { background: var(--ink); color: var(--brume); padding: 1.3rem 1rem; }
+.trust-inner {
+  max-width: 1120px; margin: 0 auto; display: flex; gap: 3rem;
+  justify-content: center; flex-wrap: wrap; font-size: 0.92rem;
+}
+.trust-inner strong { color: #fff; font-weight: 600; }
+.trust-inner span { color: var(--on-dark); }
+
+/* ---------- Cartes accueil ---------- */
+.three-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; padding: 4rem 0 3rem; }
+a.card { text-decoration: none; color: inherit; }
+.card {
+  display: block; background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 2.4rem 2.2rem; transition: 0.25s; position: relative;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 2.2rem; width: 2.6rem; height: 3px;
+  background: var(--amethyste);
+}
+.card.full { grid-column: 1 / -1; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(60,45,90,0.10); }
+.card .kicker {
+  font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--amethyste);
+  margin-bottom: 0.9rem;
+}
+.card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 0.7rem; }
+.card p { color: var(--ink-soft); font-size: 1rem; }
+.card .sub { font-size: 0.85rem; color: var(--amethyste); margin-top: 1.2rem; font-style: italic; }
+@media (max-width: 640px) { .three-cards { grid-template-columns: 1fr; } }
+
+/* ---------- Citation ---------- */
+.quote-strip {
+  position: relative; text-align: center; font-style: italic; font-size: 1.35rem;
+  padding: 4rem 1rem; color: var(--ink); background: var(--white);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.quote-strip::before {
+  content: ''; position: absolute; left: 50%; top: -1.4rem; width: 1px; height: 2.8rem;
+  background: var(--amethyste-soft);
+}
+.quote-strip .small { font-size: 0.98rem; color: var(--ink-soft); margin-top: 1rem; font-style: normal; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+/* ---------- Triptyque ---------- */
+.triple { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.6rem; margin-top: 1.5rem; }
+.triple .cell { background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 1.8rem 1.6rem; }
+.triple .cell h4 { margin-bottom: 0.6rem; font-size: 1.08rem; font-weight: 600; }
+.triple .cell p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* ---------- Coffre (section sombre) ---------- */
+.vault {
+  background: var(--ink); color: var(--brume); border-radius: 4px;
+  padding: 3rem 2.6rem; margin: 3.5rem 0; border-top: 3px solid var(--amethyste);
+}
+.vault h2 { font-size: 1.7rem; font-weight: 500; margin-bottom: 1.2rem; }
+.vault h2 em { color: var(--amethyste-soft); }
+.vault p { color: var(--on-dark); margin-bottom: 1rem; }
+.vault ul { list-style: none; margin: 1rem 0 1.5rem; }
+.vault li { padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.12); color: var(--on-dark-strong); }
+.vault li:last-child { border-bottom: none; }
+.vault .key-q { color: var(--amethyste-soft); font-weight: bold; margin-top: 1.5rem; }
+
+/* ---------- Sous-navigation ---------- */
+.subnav { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.8rem 0 2.2rem; }
+.subnav span {
+  font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 0.78rem; letter-spacing: 0.06em;
+  background: var(--white); border: 1px solid var(--line);
+  padding: 0.4rem 0.95rem; border-radius: 999px; color: var(--ink-soft);
+}
+
+/* ---------- Panneaux & formulaires ---------- */
+.panel {
+  position: relative; background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 2rem 1.9rem; margin-bottom: 1.6rem;
+}
+.panel::before {
+  content: ''; position: absolute; top: 0; left: 1.9rem; width: 2.2rem; height: 3px;
+  background: var(--amethyste-soft);
+}
+.panel h3 { margin-bottom: 0.8rem; font-weight: 600; font-size: 1.15rem; }
+label { display: block; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 0.85rem; color: var(--ink-soft); margin: 0.9rem 0 0.3rem; }
+input[type=text], input[type=email], input[type=password], input[type=date], textarea, select {
+  width: 100%; padding: 0.7rem 0.9rem; border: 1px solid var(--line); border-radius: 4px;
+  font-family: inherit; font-size: 0.97rem; background: var(--brume); color: var(--ink);
+}
+textarea { min-height: 110px; resize: vertical; }
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--amethyste-soft); }
+.emoji-row { display: flex; gap: 0.5rem; margin: 0.6rem 0; flex-wrap: wrap; }
+.emoji-row button {
+  font-size: 1.5rem; background: var(--brume); border: 1px solid var(--line);
+  border-radius: 4px; padding: 0.35rem 0.6rem; cursor: pointer;
+}
+.emoji-row button.sel { border-color: var(--amethyste); background: var(--brume-2); }
+.hint { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.8rem; }
+.ok-msg { color: var(--green); font-size: 0.92rem; margin-top: 0.7rem; display: none; }
+.panel .note { font-size: 0.93rem; color: var(--ink-soft); }
+
+/* ---------- Offres ---------- */
+.tarifs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; }
+.tarif {
+  position: relative; background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 1.8rem 1.6rem; display: flex; flex-direction: column;
+}
+.tarif::before { content: ''; position: absolute; top: 0; left: 1.6rem; width: 2.2rem; height: 3px; background: var(--amethyste-soft); }
+.tarif.full { grid-column: 1 / -1; }
+.tarif .num { font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 0.72rem; color: var(--amethyste); letter-spacing: 0.14em; text-transform: uppercase; }
+.tarif h4 { margin: 0.4rem 0 0.7rem; font-size: 1.25rem; font-weight: 600; }
+.tarif p { font-size: 0.93rem; color: var(--ink-soft); flex: 1; }
+.tarif .price { margin-top: 1.1rem; font-size: 0.87rem; font-style: italic; color: var(--green); }
+.tarif.featured { border-color: var(--amethyste); box-shadow: 0 6px 22px rgba(111,85,153,0.14); }
+.tarif.featured::before { background: var(--amethyste); }
+@media (max-width: 800px) { .tarifs-grid { grid-template-columns: 1fr; } }
+
+/* ---------- FAQ ---------- */
+.faq-section {
+  margin: 2.6rem 0 1.1rem; color: var(--amethyste); font-size: 1.2rem; font-weight: 500;
+  border-bottom: 1px solid var(--line); padding-bottom: 0.5rem;
+}
+.faq-item { background: var(--white); border: 1px solid var(--line); border-radius: 4px; margin-bottom: 0.9rem; overflow: hidden; }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 1.02rem; color: var(--ink);
+  padding: 1.1rem 1.3rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.faq-q:hover { background: var(--brume-2); }
+.faq-q .qnum { color: var(--amethyste); margin-right: 0.5rem; }
+.faq-q .chev { color: var(--amethyste); transition: transform 0.3s; flex-shrink: 0; font-size: 0.8rem; }
+.faq-item.open .chev { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-a p { padding: 0 1.3rem 1.2rem; color: var(--ink-soft); font-size: 0.96rem; }
+
+/* ---------- Garde-fou ---------- */
+.guard { position: relative; border: 1px solid var(--amethyste); border-radius: 4px; background: var(--white); padding: 2rem 1.9rem; margin: 1.6rem 0; }
+.guard::before { content: ''; position: absolute; top: 0; left: 1.9rem; width: 2.2rem; height: 3px; background: var(--amethyste); }
+.guard h3 { color: var(--amethyste-deep); margin-bottom: 0.7rem; font-weight: 600; font-size: 1.15rem; }
+.guard ul { margin: 0.7rem 0 0.7rem 1.2rem; color: var(--ink-soft); }
+.guard li { margin-bottom: 0.4rem; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--ink); color: #9c94ad; text-align: center; padding: 3rem 1rem 2.4rem; margin-top: 4rem; font-size: 0.9rem; }
+footer .sig { color: var(--brume); font-size: 1.08rem; font-style: italic; margin-bottom: 1.2rem; }
+footer .sig strong { color: var(--amethyste-soft); font-style: normal; }
+footer a { color: var(--amethyste-soft); text-decoration: underline; }
+footer .worknote { margin-top: 1.3rem; font-size: 0.8rem; color: #7d7590; }
+
+@media (max-width: 640px) {
+  header { position: static; }
+  .header-inner { justify-content: center; gap: 1rem; }
+  nav { justify-content: center; gap: 1rem; }
+  nav a.espace { margin-left: 0; }
+  .hero { padding: 3.5rem 1rem 2.5rem; }
+  .vault { padding: 2.2rem 1.5rem; }
+}

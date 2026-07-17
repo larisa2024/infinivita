@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Questions fréquentes — InfiniVita</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Infini<span>Vita</span></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="journal.html">Mon Journal</a>
+      <a href="futur.html">Mon Futur</a>
+      <a href="transmission.html">Ma Transmission</a>
+      <a href="tarifs.html">Services &amp; tarifs</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="espace.html" class="espace">Mon espace</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap narrow">
+  <section class="block">
+    <div class="page-kicker">FAQ</div>
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p style="color:var(--ink-soft);margin:0.8rem 0 0.5rem;">45 réponses, en huit chapitres. Pour le reste : 30 minutes gratuites, en visio, avec un humain.</p>
+    <div id="faq-root"></div>
+  </section>
+</div>
+
+<footer>
+  <div class="sig"><strong>InfiniVita</strong> — parce que ce que vous avez vécu ne devrait jamais se réduire à ce dont on se souvient de vous.</div>
+  <div>Privacy by design · Conservation fiduciaire 99 ans · <a href="faq.html">FAQ</a> · <a href="legal.html#mentions">Mentions légales</a> · <a href="legal.html#confidentialite">Confidentialité</a> · <a href="legal.html#cgu">CGU</a></div>
+  <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  const FAQ = [
+    { section: "Comprendre InfiniVita", items: [
+      ["Qu'est-ce qu'InfiniVita ?",
+       "Un journal de vie chiffré et daté, conçu pour durer 99 ans. Vous y écrivez vos trois temps — le présent, le passé, l'avenir — et vous décidez seul(e) de ce qui sera transmis, à qui, et quand. Pour vous, d'abord. Pour les vôtres, si vous le décidez. Pour personne d'autre."],
+      ["À qui s'adresse InfiniVita ?",
+       "À toute personne qui veut garder trace de sa vie, quel que soit son âge. On peut commencer à 20 ans pour se relire à 60, ou à 80 ans pour transmettre. Nul n'est à l'abri de perdre l'accès à sa propre mémoire : ce journal est d'abord écrit pour soi-même."],
+      ["En quoi est-ce différent d'un blog, d'un cloud ou d'un réseau social ?",
+       "Rien n'est public, rien n'est partagé par défaut, rien ne cherche votre attention. Pas de « j'aime », pas de publicité, pas d'algorithme de recommandation. Vos écrits sont chiffrés avec une clé que nous ne possédons pas : vous êtes le client, pas le produit."],
+      ["Faut-il être à l'aise avec la technologie ?",
+       "Non. Si vous savez écrire un message, vous savez utiliser InfiniVita : vous écrivez, la date s'ajoute toute seule, tout le reste est automatique. Et pour toute question, 30 minutes gratuites en visio avec un humain — jamais un robot."],
+      ["Quand le service ouvre-t-il ?",
+       "InfiniVita est en phase de test. Rejoignez la liste d'attente : vous serez prévenu(e) en premier à l'ouverture, et les tarifs vous seront communiqués avant tout engagement."]
+    ]},
+    { section: "Écrire au quotidien", items: [
+      ["Que puis-je écrire ?",
+       "Tout, selon vos trois temps : le quotidien et la météo du jour (Mon Journal — le présent), les souvenirs anciens (Mémoire — le passé), vos projets, créations et livres (Mon Futur — l'avenir)."],
+      ["Dois-je écrire tous les jours ?",
+       "Non. Aucun rythme n'est imposé, aucune relance culpabilisante ne vous sera envoyée. Le fil accueille ce que vous lui confiez, quand vous le confiez : trois lignes un mardi, rien pendant un mois, dix pages un dimanche."],
+      ["Pourquoi la date s'ajoute-t-elle automatiquement ?",
+       "Parce que c'est elle qui fait de votre journal une archive digne de foi. Chaque entrée porte sa date, apposée par le système : dans dix ans, vous — ou ceux qui recevront votre histoire — saurez que ces mots ont bien été écrits ce jour-là."],
+      ["Puis-je écrire des souvenirs anciens ?",
+       "Oui, c'est le rôle de la section Mémoire : vous donnez au souvenir sa vraie date (l'été 1987, ce jour de novembre), et la date d'écriture s'ajoute d'elle-même. Votre passé retrouve ainsi sa place dans le fil."],
+      ["Puis-je corriger ou supprimer une ancienne entrée ?",
+       "Votre journal est une archive : aucune entrée ne peut être réécrite après coup — c'est ce qui fait sa valeur, pour vous et pour ceux qui la recevront. En revanche, vous pouvez supprimer entièrement une entrée, ou toutes les notes d'une journée, à tout moment."],
+      ["Puis-je ajouter des photos et des vidéos ?",
+       "Oui, dès l'offre 1 — Le Fil. Elles sont chiffrées exactement comme vos textes, datées, et rattachées à vos entrées. La photo montre ce que vous faisiez ; vos mots disent ce que vous étiez : ensemble, ils font le tissage."],
+      ["Puis-je dicter au lieu d'écrire ?",
+       "La dictée vocale est prévue : vous parlez, le texte s'écrit, et vous relisez avant de sceller. Les modalités précises (et la conservation éventuelle de votre voix) seront détaillées à l'ouverture."]
+    ]},
+    { section: "Confidentialité et sécurité", items: [
+      ["Pouvez-vous lire mon journal ?",
+       "Non — et c'est volontairement impossible. Votre journal est chiffré sur votre appareil, avec une clé unique fabriquée à partir de votre phrase secrète. Nous ne possédons pas cette clé : même sur ordre, nous serions incapables de lire une ligne de votre vie."],
+      ["Le chiffrement de bout en bout, concrètement, ça veut dire quoi ?",
+       "Que vos mots sont transformés en données illisibles sur votre appareil, avant tout envoi. Ce qui circule et ce qui est stocké chez nous n'est qu'une suite de caractères indéchiffrables. Seule votre clé — qui ne quitte jamais vos mains — peut les rouvrir."],
+      ["Qu'est-ce que ma phrase secrète ?",
+       "C'est la phrase qui fabrique votre clé de chiffrement. Elle ne nous est jamais transmise, jamais stockée. Choisissez-la mémorable pour vous, impossible pour les autres — et gardez-la comme vous garderiez la clé d'un coffre."],
+      ["Que se passe-t-il si je perds ma phrase secrète ?",
+       "Sans elle, votre mémoire devient indéchiffrable — pour tout le monde, y compris nous. C'est pourquoi nous proposons le dépôt de clé sous scellé chez le notaire de votre choix (offre 4 — La Transmission, tarif inclus dans le devis) : elle ne sera remise qu'à la personne que vous aurez désignée, dans les conditions que vous aurez fixées."],
+      ["Où sont hébergées mes données ?",
+       "Trois lieux, à votre choix — ou les trois à la fois : en France (droit français et européen, RGPD), en Suisse (l'une des lois de protection des données les plus strictes au monde), ou entièrement chez vous, en local."],
+      ["L'hébergement local, comment ça marche ?",
+       "Vos données ne quittent jamais votre domicile : elles sont stockées sur un support chez vous, chiffrées comme le reste. C'est une option disponible sur toutes les offres, cumulable avec l'hébergement France et Suisse pour ceux qui veulent les trois gardes à la fois."],
+      ["Que se passerait-il si vos serveurs étaient piratés ?",
+       "Un pirate n'obtiendrait que des blocs chiffrés, illisibles sans votre clé — que nous ne détenons pas. C'est le principe même du chiffrement de bout en bout : la sécurité ne repose pas sur la promesse que rien n'arrivera, mais sur le fait que même le pire ne livrerait rien."],
+      ["Êtes-vous conformes au RGPD ?",
+       "Oui : droit d'accès, d'effacement et de portabilité sur tous vos contenus, droit de rectification sur vos données de compte (e-mail, nom, facturation). Vos entrées de journal, elles, se suppriment mais ne se réécrivent pas — c'est leur valeur d'archive. Un délégué à la protection des données sera désigné avant l'ouverture."]
+    ]},
+    { section: "L'assistant de rédaction (offre 2 — Le Récit)", items: [
+      ["Une IA va-t-elle réécrire mes textes ?",
+       "Jamais. L'assistant est un compagnon d'écriture, pas un auteur : il peut vous aider avant que vous ne scelliez une entrée, mais une fois confiée, votre page est définitive et intacte. C'est votre version originale, brute, qui reste et qui fait foi."],
+      ["Comment fonctionne l'assistant ?",
+       "C'est une IA locale, proposée avec l'offre 2 — Le Récit. Elle peut corriger une tournure, retrouver un mot qui vous échappe, vous aider à réfléchir à voix haute avant d'écrire. Elle n'intervient que si vous la sollicitez, et uniquement avant le scellement de l'entrée."],
+      ["Mes textes servent-ils à entraîner une IA ?",
+       "Jamais. Ni l'assistant, ni aucun autre modèle. Vos écrits sont chiffrés avec une clé que nous ne possédons pas : ils ne peuvent techniquement servir à rien d'autre qu'à vous."],
+      ["Puis-je désactiver l'assistant ?",
+       "Oui, à tout moment — ou ne jamais l'activer. Le Fil (offre 1) fonctionne entièrement sans lui : beaucoup préfèrent écrire seuls, et c'est très bien ainsi."],
+      ["L'assistant peut-il lire tout mon journal ?",
+       "Non. Il ne voit que le texte en cours d'écriture, sur votre appareil, le temps de vous aider. Rien n'est envoyé à l'extérieur, rien n'est mémorisé par l'assistant après le scellement."]
+    ]},
+    { section: "Les offres et les tarifs", items: [
+      ["Que contiennent les quatre offres ?",
+       "Offre 1 — Le Fil : textes, photos et vidéos, l'essentiel de votre journal. Offre 2 — Le Récit : le Fil + l'assistant de rédaction IA. Offre 3 — Le Livre : votre mémoire imprimée et reliée ; la biographie accompagnée en visio est présentée sur devis. Offre 4 — La Transmission (sur devis) : service juridique de transmission avec notaire partenaire, dépôt de votre clé chez le notaire, et en option le jumeau numérique."],
+      ["Combien ça coûte ?",
+       "Les tarifs des offres 1 à 3 seront communiqués à l'ouverture — les inscrits de la liste d'attente seront prévenus en premier. La biographie accompagnée (offre 3) et l'offre 4 — La Transmission sont sur devis, car ce sont des services sur mesure."],
+      ["Puis-je changer d'offre à tout moment ?",
+       "Oui, dans les deux sens : commencer par Le Fil et ajouter l'assistant plus tard, ou redescendre d'une offre. Rien de ce que vous avez écrit n'est perdu au passage."],
+      ["Y a-t-il un engagement de durée ?",
+       "Non. Vous pouvez arrêter, exporter vos données, ou tout effacer à tout moment : c'est votre mémoire, elle vous appartient."],
+      ["Pourquoi certains services sont-ils sur devis ?",
+       "Parce qu'ils sont sur mesure : une biographie accompagnée dépend du nombre d'entretiens, une transmission notariale dépend de vos instructions, un jumeau numérique dépend de ce que vous confiez. Le rendez-vous de 30 minutes gratuit sert précisément à préciser cela, sans engagement."],
+      ["Le livre imprimé (offre 3 — Le Livre), comment ça marche ?",
+       "Votre journal — ou la partie que vous choisissez — est mis en page et imprimé en livre relié : un objet à tenir, à offrir, à laisser. Si vous souhaitez aller plus loin, la biographie accompagnée ajoute des entretiens en visio pour donner forme à votre récit ; elle est présentée sur devis."]
+    ]},
+    { section: "La transmission", items: [
+      ["À qui puis-je transmettre mon histoire ?",
+       "À vos proches d'abord — famille, amis. Mais aussi à vos causes et communautés : une association qui vous tient à cœur, une école, un musée, des archives locales, votre commune. Vous décidez quoi, à qui, et quand : de votre vivant, après, ou jamais."],
+      ["Quand mes proches reçoivent-ils mon journal ?",
+       "Exactement quand vous l'avez décidé : de votre vivant, si vous voulez partager certaines pages ; après, selon vos instructions déposées chez le notaire ; ou jamais, si tel est votre choix. Chaque destinataire peut recevoir une partie différente, à un moment différent."],
+      ["Quel est le rôle du notaire ?",
+       "Celui qu'il a toujours eu : garder ce que les familles ont de plus précieux. Votre clé de chiffrement est déposée chez le notaire de votre choix, sous scellé, avec vos instructions (offre 4 — La Transmission, tarif inclus dans le devis). Le jour venu, c'est lui — et lui seul — qui la remettra. Aucune entreprise, aucune IA ne décide de votre transmission. Un officier public, oui."],
+      ["Puis-je léguer mon témoignage à une association ou une institution ?",
+       "Oui : le récit de votre engagement à une association, un témoignage d'époque à un musée, la mémoire d'un métier à des archives, l'histoire d'un village à votre commune. Les conditions précises sont fixées lors du rendez-vous notarial."],
+      ["Puis-je changer d'avis sur ma transmission ?",
+       "À tout moment, de votre vivant : ajouter ou retirer un destinataire, modifier ce que chacun recevra, changer les conditions. Vos instructions chez le notaire sont mises à jour, comme on modifie un testament."],
+      ["Une vérification d'identité est-elle demandée ?",
+       "Oui, une vérification d'identité est demandée pour les services notariés et de transmission — jamais à l'inscription ni pour l'usage quotidien."],
+      ["Que devient mon journal après ma mort ?",
+       "Exactement ce que vous avez décidé, et rien d'autre. Vos instructions, déposées chez le notaire, s'appliquent : tel proche reçoit telle partie, telle association reçoit votre témoignage, votre jumeau numérique s'active — ou pas."]
+    ]},
+    { section: "Le jumeau numérique", items: [
+      ["Qu'est-ce que le jumeau numérique ?",
+       "Une option de l'offre 4 — La Transmission, présentée uniquement sur devis : un écho conversationnel nourri uniquement de ce que vous avez confié — vos textes, et votre voix si vous le souhaitez. Encadré par un comité éthique, il n'est jamais activé sans votre décision écrite."],
+      ["Que ne fera jamais le jumeau numérique ?",
+       "Inventer une phrase que vous n'avez pas écrite. Répondre à une question que vous n'avez pas abordée. Imiter une opinion que vous n'avez pas exprimée. Il restitue vos mots, votre voix, vos textes : il est votre écho — jamais votre remplaçant."],
+      ["Qui décide de son activation, et pour combien de temps ?",
+       "Vous, et vous seul(e), par décision écrite : s'il existera, pour quelles personnes, et pour quelle durée. Le comité éthique veille au respect de ce cadre. Sans votre décision écrite, il n'existe pas."],
+      ["La biographie accompagnée sert-elle à créer le jumeau numérique ?",
+       "Seulement si vous le décidez. La biographie accompagnée (offre 3 — Le Livre, sur devis) produit d'abord votre récit de vie, écrit à partir d'entretiens en visio. En option, ces entretiens enregistrés — votre voix authentique, vos récits — peuvent nourrir la création de votre jumeau numérique (option de l'offre 4). Les deux choix restent séparés : biographie sans jumeau, ou biographie avec jumeau."]
+    ]},
+    { section: "La durée et l'entreprise", items: [
+      ["Combien de temps mes écrits sont-ils conservés ?",
+       "InfiniVita est conçu pour durer 99 ans : une conservation fiduciaire, pensée pour traverser les générations — assez pour que vos arrière-petits-enfants puissent lire ce que vous avez écrit aujourd'hui."],
+      ["Que se passerait-il si InfiniVita disparaissait ?",
+       "La conservation fiduciaire est précisément conçue pour survivre à l'entreprise. Et trois garanties ne dépendent de personne : vous pouvez exporter vos données à tout moment, l'hébergement local garde tout chez vous, et la clé déposée chez le notaire reste valable quoi qu'il advienne de nous."],
+      ["Comment gagnez-vous de l'argent ?",
+       "Uniquement par les abonnements et les services : le journal, le livre, la transmission. Aucune publicité, aucune revente de données — de toute façon, nous ne pourrions pas vendre ce que nous sommes incapables de lire. Vous êtes le client, pas le produit."]
+    ]}
+  ];
+  buildFAQ(FAQ);
+</script>
+</body>
+</html>
