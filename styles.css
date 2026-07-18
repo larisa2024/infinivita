@@ -104,11 +104,12 @@ h2.section-title em { color: var(--amethyste); }
   color: var(--on-dark-strong); font-weight: 600; font-size: 1.08rem; margin-bottom: 1.6rem;
 }
 .hero h1 {
-  font-size: clamp(1.7rem, 3.8vw, 2.5rem); line-height: 1.18; font-weight: 550;
-  margin-bottom: 1.3rem; color: var(--white);
+  font-size: clamp(1.35rem, 2vw, 1.72rem); line-height: 1.2; font-weight: 600;
+  margin-bottom: 1.3rem; color: var(--white); white-space: nowrap;
 }
+@media (max-width: 900px) { .hero h1 { white-space: normal; font-size: clamp(1.4rem, 4.5vw, 1.9rem); } .hero br.br-desk { display: none; } }
 .hero h1 em { color: var(--amethyste-soft); }
-.hero p { color: var(--on-dark); font-size: 1.1rem; margin-bottom: 0.9rem; max-width: 54ch; }
+.hero p { color: var(--on-dark); font-size: 1rem; margin-bottom: 0.9rem; }
 .hero p strong { color: var(--on-dark-strong); }
 .hero .tagline { font-style: italic; color: var(--or); margin-top: 1.4rem; }
 .hero-illus img {
