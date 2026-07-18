@@ -29,12 +29,19 @@
 })();
 
 /* Liens de contact : adresse assemblée au chargement pour rester illisible
-   par les robots collecteurs de spam (adresse pro temporaire — à remplacer
-   par le lien TakeToki pour les rendez-vous, et par contact@<domaine> ensuite). */
+   par les robots collecteurs de spam. */
 (function () {
-  const u = 'larisa.kr', d = 'interargus.com';
+  const u = 'contact', d = 'infinivita.fr';
+  const adresse = u + '@' + d;
   document.querySelectorAll('a[data-mail-subject]').forEach(a => {
-    a.href = 'mailto:' + u + '@' + d + '?subject=' + encodeURIComponent(a.dataset.mailSubject);
+    a.href = 'mailto:' + adresse + '?subject=' + encodeURIComponent(a.dataset.mailSubject);
+  });
+  /* Affiche l'adresse en toutes lettres là où la page le demande (mentions légales) */
+  document.querySelectorAll('.mail-txt').forEach(el => {
+    const a = document.createElement('a');
+    a.href = 'mailto:' + adresse;
+    a.textContent = adresse;
+    el.appendChild(a);
   });
 })();
 
