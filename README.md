@@ -2,7 +2,7 @@
 
 Site vitrine statique de démonstration du projet **InfiniVita** : un journal de vie chiffré et daté, transmis selon les volontés de son auteur — jamais celles d'un algorithme.
 
-**Démo en ligne :** https://larisa2024.github.io/infinivita/
+**Démo en ligne :** https://infinivita.fr
 
 ## Statut
 
