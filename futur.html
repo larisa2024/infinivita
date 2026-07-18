@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Mon Futur — InfiniVita</title>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <div class="page-kicker">L'avenir</div>
     <h2 class="section-title">Mon Futur</h2>
     <div class="subnav">
-      <span>Mes Créations</span><span>Mon Assistant</span><span>Se faire relire son histoire</span>
+      <a href="#creations">Mes Créations</a><a href="#assistant">Mon Assistant</a><a href="#relire">Se faire relire son histoire</a>
     </div>
 
     <figure class="page-photo reveal">
@@ -40,7 +40,7 @@
       <p class="lead">Ce que vous écrivez aujourd'hui prépare ce qui restera demain : vos œuvres, vos projets, votre manière de raconter. Ici, vous construisez votre avenir — et vous préparez, si vous le souhaitez, le jour où votre histoire pourra vous être relue.</p>
     </div>
 
-    <div class="panel narrow" style="margin-top:2.4rem;">
+    <div class="panel narrow" id="creations" style="margin-top:2.4rem;">
       <h3>✒️ Mes Créations</h3>
       <p class="note">Un livre, vos mémoires, une histoire inventée : avec la date de début d'écriture et tout le temps qu'il faudra.</p>
       <label>Titre</label><input type="text">
@@ -51,13 +51,13 @@
       <div class="ok-msg" id="crea-ok">✓ Œuvre commencée — la date de début est gardée, le reste vous appartient.</div>
     </div>
 
-    <div class="guard narrow">
+    <div class="guard narrow" id="assistant">
       <h3>🤝 Mon Assistant — un compagnon d'écriture, jamais un auteur</h3>
       <p class="note">L'assistant d'InfiniVita est une IA locale, proposée par la plateforme (offre 2 — Le Récit) : vos textes ne servent jamais à entraîner de modèle. Elle peut vous aider à corriger une tournure, retrouver un mot, réfléchir à voix haute avant d'écrire.</p>
       <p class="note" style="margin-top:0.7rem;"><strong style="color:var(--ink)">Important :</strong> l'assistant n'intervient qu'<em>avant</em> que vous ne scelliez votre entrée. Une fois confiée, votre page est intacte, définitive : c'est votre version originale, brute, qui reste et qui fait foi.</p>
     </div>
 
-    <div class="narrow prose" style="margin-top:2.4rem;">
+    <div class="narrow prose" id="relire" style="margin-top:2.4rem;">
       <h3 style="margin-bottom:0.6rem;">📖 Se faire relire son histoire</h3>
       <p class="lead">Un jour, elle pourra vous être rendue.</p>
       <p>Une maladie, un accident, ou simplement le grand âge peuvent brouiller ce qui vous appartient le plus intimement. Peu importe votre âge aujourd'hui : nul n'est à l'abri de perdre l'accès à sa propre mémoire.</p>
@@ -78,6 +78,6 @@
   <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
 </footer>
 
-<script src="app.js?v=8"></script>
+<script src="app.js?v=9"></script>
 </body>
 </html>

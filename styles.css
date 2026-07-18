@@ -231,12 +231,16 @@ a.card { text-decoration: none; color: inherit; }
 .vault .key-q { color: var(--amethyste-soft); font-weight: bold; margin-top: 1.5rem; }
 
 /* ---------- Sous-navigation ---------- */
+html { scroll-behavior: smooth; }
+.panel, .guard, .prose, .page-photo { scroll-margin-top: 96px; }
 .subnav { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.8rem 0 2.2rem; }
-.subnav span {
+.subnav a {
   font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 0.78rem; letter-spacing: 0.06em;
   background: var(--white); border: 1px solid var(--line);
   padding: 0.4rem 0.95rem; border-radius: 999px; color: var(--ink-soft);
+  text-decoration: none; cursor: pointer; transition: 0.2s;
 }
+.subnav a:hover { border-color: var(--amethyste); color: var(--amethyste-deep); background: var(--brume-2); }
 
 /* ---------- Panneaux & formulaires ---------- */
 .panel {

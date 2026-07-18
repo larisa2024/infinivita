@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Mon Journal — InfiniVita</title>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <div class="page-kicker">Le présent</div>
     <h2 class="section-title">Mon Journal</h2>
     <div class="subnav">
-      <span>Météo du jour</span><span>Ma journée</span><span>Mémoire</span><span>Projections</span>
+      <a href="#meteo">Météo du jour</a><a href="#journee">Ma journée</a><a href="#memoire">Mémoire</a><a href="#projections">Projections</a>
     </div>
 
     <figure class="page-photo reveal">
@@ -46,7 +46,7 @@
       <p><strong>InfiniVita garde vos mots tels que vous les avez écrits. Pas une version optimisée. Pas une version corrigée. La vôtre.</strong></p>
     </div>
 
-    <div class="panel narrow" style="margin-top:2.4rem;">
+    <div class="panel narrow" id="meteo" style="margin-top:2.4rem;">
       <h3>🌦️ Météo du jour</h3>
       <p class="note">Quel temps fait-il en vous, et que souhaitez-vous à cette journée ?</p>
       <div class="emoji-row" id="meteo-row">
@@ -60,7 +60,7 @@
       <div class="ok-msg" id="meteo-ok">✓ Météo posée, datée du jour, chiffrée.</div>
     </div>
 
-    <div class="panel narrow">
+    <div class="panel narrow" id="journee">
       <h3>📔 Ma journée</h3>
       <p class="note">Écrivez quand vous voulez, ce que vous voulez. La date du jour s'ajoute toute seule.</p>
       <label>Comment vous sentez-vous ?</label>
@@ -76,7 +76,7 @@
       <p class="hint">🔒 Chiffré sur votre appareil avant tout envoi. Personne, pas même nous, ne peut le lire.</p>
     </div>
 
-    <div class="panel narrow">
+    <div class="panel narrow" id="memoire">
       <h3>🗝️ Mémoire</h3>
       <p class="note">Un souvenir d'avant vous revient ? Donnez-lui sa vraie date : la date d'écriture s'ajoute d'elle-même.</p>
       <label>Date du souvenir</label><input type="date">
@@ -85,7 +85,7 @@
       <div class="ok-msg" id="mem-ok">✓ Souvenir gardé à sa vraie date.</div>
     </div>
 
-    <div class="panel narrow">
+    <div class="panel narrow" id="projections">
       <h3>🧭 Projections</h3>
       <p class="note">Votre plan d'avenir, daté d'aujourd'hui, avec la date de réalisation que vous visez.</p>
       <label>Mon projet / plan d'action</label><textarea></textarea>
@@ -102,6 +102,6 @@
   <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
 </footer>
 
-<script src="app.js?v=8"></script>
+<script src="app.js?v=9"></script>
 </body>
 </html>

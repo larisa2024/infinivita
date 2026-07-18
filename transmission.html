@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Ma Transmission — InfiniVita</title>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
@@ -29,8 +29,8 @@
     <div class="page-kicker">L'héritage</div>
     <h2 class="section-title">Ma Transmission — <em>mon héritage</em></h2>
     <div class="subnav">
-      <span>Mes proches</span><span>Mes causes et communautés</span>
-      <span>Le dépôt chez le notaire</span><span>Mon jumeau numérique</span>
+      <a href="#proches">Mes proches</a><a href="#causes">Mes causes et communautés</a>
+      <a href="#notaire">Le dépôt chez le notaire</a><a href="#jumeau">Mon jumeau numérique</a>
     </div>
 
     <figure class="page-photo reveal">
@@ -43,7 +43,7 @@
       <p>À vos proches, à une cause, à une communauté. De votre vivant, après, ou jamais. Vous décidez quoi, à qui, et quand — et vous restez libre de tout modifier à tout moment, de votre vivant. Les conditions sont définies en rendez-vous visio avec un notaire partenaire et notre responsable technique.</p>
     </div>
 
-    <div class="panel narrow" style="margin-top:2.4rem;">
+    <div class="panel narrow" id="proches" style="margin-top:2.4rem;">
       <h3>👥 Mes proches</h3>
       <p class="note">Famille, amis, contacts : les personnes qui pourront recevoir tout ou partie de votre histoire. Remplissez quand vous voulez, ou jamais. Facultatif.</p>
       <label>Nom</label><input type="text">
@@ -53,7 +53,7 @@
       <div class="ok-msg" id="proche-ok">✓ Ajouté. Une vérification d'identité ne sera demandée qu'au moment d'une éventuelle transmission.</div>
     </div>
 
-    <div class="panel narrow">
+    <div class="panel narrow" id="causes">
       <h3>🌍 Mes causes et communautés</h3>
       <p class="note">Votre histoire peut éclairer au-delà des vôtres. Une association qui vous a accompagné(e) toute une vie ; une école, un musée, des archives locales, votre commune. Le récit d'un engagement, un message aux bénévoles de demain, la mémoire d'un métier, l'histoire d'un village.</p>
       <label>Destinataire (association, école, musée, archives, commune…)</label><input type="text">
@@ -70,13 +70,13 @@
       <div class="ok-msg" id="cause-ok">✓ Ajouté. Les conditions précises seront fixées lors du rendez-vous notarial — et restent modifiables à tout moment, de votre vivant.</div>
     </div>
 
-    <div class="panel narrow">
+    <div class="panel narrow" id="notaire">
       <h3>⚖️ Le notaire, gardien de votre clé</h3>
       <p class="note">Depuis toujours, les notaires gardent ce que les familles ont de plus précieux : testaments, actes, dernières volontés. InfiniVita s'inscrit dans cette tradition. Votre clé de chiffrement peut être déposée chez le notaire de votre choix, sous scellé, avec vos instructions de transmission (offre 4 — La Transmission). Le jour venu, c'est lui — et lui seul — qui la remettra à vos proches.</p>
       <p class="note" style="margin-top:0.8rem;font-style:italic;">Aucune entreprise, aucune IA, aucun serveur ne décide de votre transmission. Un officier public, oui.</p>
     </div>
 
-    <div class="narrow prose" style="margin-top:2.4rem;">
+    <div class="narrow prose" id="jumeau" style="margin-top:2.4rem;">
       <h3 style="margin-bottom:0.6rem;">🪞 Mon jumeau numérique</h3>
       <p class="lead">Un jour, vos proches pourront réentendre vos mots — les vôtres, exactement, jamais inventés.</p>
       <p>Le jumeau numérique d'InfiniVita est un écho conversationnel nourri uniquement de ce que vous avez confié : vos textes, votre voix si vous le souhaitez. Il est encadré par un comité éthique et n'est jamais activé sans votre décision écrite. Il fait partie de la transmission, car c'est un legs comme un autre : c'est vous qui décidez s'il existera, pour qui, et pour combien de temps.</p>
@@ -107,6 +107,6 @@
   <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
 </footer>
 
-<script src="app.js?v=8"></script>
+<script src="app.js?v=9"></script>
 </body>
 </html>
