@@ -40,9 +40,9 @@
       <h3 style="margin-bottom:0.6rem;">Vous seul(e) êtes maître de votre histoire</h3>
       <p class="lead">Aucune intelligence artificielle, même la plus savante, ne sait qui vous êtes. Vos rêves, vos doutes, vos exploits comme vos échecs, l'énergie d'un matin, la fatigue d'un soir, la main tendue d'un ami — tout cela n'existe que parce que vous l'avez traversé.</p>
       <p>Ce journal est d'abord écrit <strong>pour vous-même</strong> : si un accident ou la maladie brouillait un jour votre mémoire, vos mots — intacts, datés — vous attendraient.</p>
-      <p><strong>Un fil relie vos trois temps :</strong> le quotidien et la météo du jour — le présent ; les souvenirs anciens, dans Mémoire — le passé ; vos projets, créations et livres, dans Mon Futur — l'avenir.</p>
+      <p><strong>Un fil relie votre vie :</strong> le présent et la mémoire du jour, dans Mon Journal ; vos souvenirs (modifiables), vos projets, créations et livres, dans Mon Futur.</p>
       <p>Un algorithme peut résumer, reformuler, lisser. Il ne peut pas se souvenir à votre place. Personne ne le peut.</p>
-      <p><strong>Et notre propre mémoire transforme la réalité.</strong> Chaque souvenir rappelé se retouche, se réécrit un peu — de bonne foi. C'est pourquoi votre journal est une archive : une entrée confiée ne peut plus être corrigée, jamais. Vous pouvez la détruire entièrement, si vous le décidez ; vous ne pouvez pas la réécrire. C'est ce qui fait d'elle un témoin fidèle. C'est la vieille loi des archives : les paroles s'envolent, les écrits restent — les vôtres, datés, font foi.</p>
+      <p><strong>Et notre propre mémoire transforme la réalité.</strong> Chaque souvenir rappelé se retouche, se réécrit un peu — de bonne foi. C'est pourquoi votre journal est une archive : la page du jour reste modifiable jusqu'au soir ; le lendemain, elle est scellée et ne peut plus être corrigée. Vous pouvez la détruire entièrement, si vous le décidez ; vous ne pouvez pas la réécrire. C'est ce qui fait d'elle un témoin fidèle. C'est la vieille loi des archives : les paroles s'envolent, les écrits restent — les vôtres, datés, restent.</p>
       <p><strong>InfiniVita garde vos mots tels que vous les avez écrits. Pas une version optimisée. Pas une version corrigée. La vôtre.</strong></p>
     </div>
 
@@ -72,13 +72,13 @@
       <label>Votre journée</label>
       <textarea placeholder="Aujourd'hui, qu'avez-vous envie de garder ?"></textarea>
       <div style="margin-top:1rem;"><button class="btn" onclick="okMsg('jour-ok')">Confier à ma mémoire</button></div>
-      <div class="ok-msg" id="jour-ok">✓ Confié. Une entrée scellée ne peut plus être réécrite — seulement supprimée entièrement, si vous le choisissez.</div>
+      <div class="ok-msg" id="jour-ok">✓ Confié. Modifiable jusqu'au soir ; scellée le lendemain, cette entrée ne pourra plus être réécrite — seulement supprimée entièrement, si vous le choisissez.</div>
       <p class="hint">🔒 Démonstration : dans la version bêta, chaque entrée sera chiffrée sur votre appareil avant tout envoi.</p>
     </div>
 
     <div class="panel narrow" id="memoire">
       <h3>🗝️ Mémoire</h3>
-      <p class="note">Un souvenir d'avant vous revient ? Donnez-lui sa vraie date : la date d'écriture s'ajoute d'elle-même.</p>
+      <p class="note">Un souvenir vous revient aujourd'hui ? Notez-le tel qu'il vous revient, avec sa date si vous la connaissez. Comme toute la page du jour, il sera scellé le lendemain.</p>
       <label>Date du souvenir</label><input type="date">
       <label>Le souvenir</label><textarea></textarea>
       <div style="margin-top:1rem;"><button class="btn" onclick="okMsg('mem-ok')">Garder ce souvenir</button></div>
@@ -98,7 +98,7 @@
 
 <footer>
   <div class="sig"><strong>InfiniVita</strong> — parce que ce que vous avez vécu ne devrait jamais se réduire à ce dont on se souvient de vous.</div>
-  <div>Privacy by design · Conservation longue durée · <a href="faq.html">FAQ</a> · <a href="legal.html#mentions">Mentions légales</a> · <a href="legal.html#confidentialite">Confidentialité</a> · <a href="legal.html#cgu">CGU</a> · <a href="#" data-mail-subject="Contact — InfiniVita">Contact</a></div>
+  <div>Protection des données dès la conception · Conservation longue durée · <a href="faq.html">FAQ</a> · <a href="legal.html#mentions">Mentions légales</a> · <a href="legal.html#confidentialite">Confidentialité</a> · <a href="legal.html#cgu">CGU</a> · <a href="#" data-mail-subject="Contact — InfiniVita">Contact</a></div>
   <div class="worknote">InfiniVita est un nom de travail. Prototype de démonstration : les formulaires du journal n'envoient rien — tout reste dans votre navigateur.</div>
 </footer>
 
